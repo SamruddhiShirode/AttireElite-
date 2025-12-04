@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //pass by  reference object
+    let person={
+     name:"john",
+     age:24
+    };
+    document.write(person.name);
+    document.write("<br>");
+    document.write(" I am " + person.name  +  " I am " + person.age+" years old ");
+    document.write("<br><br>")
+
+    function a(obj){
+        obj.age=27;
+    }
+    a(person)
+    document.write(" I am " +person.age + " years old ");
+</script>
+
+</body>
+</html>

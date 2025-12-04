@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*const person ={
+            firstname : "sam",
+            lastname : "shirode",
+            age : 22
+
+        };
+        document.write(person.firstname + " is " + person.age + " years old ");*/
+
+        //new object
+        /*const human = new Object({
+            firstname : "sam",
+            lastname : "shirode",
+            age : 22
+
+        });
+        document.write(human.firstname);
+        human.nationality = "English";
+        document.write("<br>");
+        document.write(human.nationality);
+        document.write("<br>");
+
+        delete human.age;
+        document.write(human.age);*/
+    
+        /*const myobj ={
+            name : "john",
+            myCars : {
+                car1: "ford",
+                car2 : "bmw",
+                car3 : "fiat",
+            }
+        };
+        document.write(myobj["myCars"]["car2"]);
+        document.write(myobj.myCars.car2); */
+
+        // 
+        /*const person = {
+       firstname: "john",
+       lastname : "deo",
+       fullname : function(){
+        return this.firstname + " " + this.lastname;
+       }
+    };
+    document.write(person.fullname());*/
+
+    //constructor function
+
+    /*function person(first, last, age, eye){
+        this.firstname = first;
+        this.lastname = last;
+        this.age = age;
+        this.eyeColor = eye;
+
+    }
+    const father = new person("john", "Doe", 50, "blue");
+    const mother = new person("sally","rally",43, "grey");
+    document.write(mother.firstname + " "+ mother.lastname + " . her eyecolor is " + mother.eyeColor + "<br>"+ father.firstname);*/
+
+    //js date & time
+
+    const d = new Date();
+    console.log(d)
+
+    const d1 = new Date("2022-03-25");
+    const d2 = new Date("Oct 13, 2014 11:13:00");
+    console.log(d1);
+    console.log(d2);
+ 
+    console.log(d.getMonth());
+    console.log(d.getFullYear());
+    console.log(d.getDate());
+    console.log(d.getDay());
+    console.log(d.getHours());
+    console.log(d.getMinutes());
+    console.log(d.getMilliseconds());
+    console.log(d.getSeconds());
+    console.log(d.getTime());
+
+
+   
+
+    </script>
+</body>
+</html>

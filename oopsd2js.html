@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- polymorphism -->
+<!-- 
+    <script>
+        class sum {
+            add(a,b){
+                console.log(a+b);
+
+            }
+        }
+        class sum1 extends sum{
+            add(a,b){
+                 console.log(a+b+c);
+            }
+        }
+        let d = new sum1();
+        d.add(10,20,40); 
+        d.add(10,40,20);
+    </script> -->
+
+    <!-- Abstraction -->
+    <!-- <h2>javascript Abstraction Example-Bike</h2>
+    <p>Open Consoe (F12) to see output</p>
+
+    <script>
+        class Bike{
+            start(){
+                console.log("Bike started");
+            }
+            //private method(hidden from outside)
+            #engineStart(){
+                console.log("Engine Starting....");
+            }
+        }
+
+        // creating object
+        let b1 = new Bike();
+
+        // Calling method
+        b1.start();
+
+    </script> -->
+
+    <!-- static method -->
+    <!-- <script>
+     class MathUtil{
+        static add(a,b){
+            return a + b;
+        }
+     }
+     console.log(MathUtil.add(5,10));
+    </script> -->
+
+    
+    
+
+
+    <script>
+        class Student{
+            constructor(name){
+                this._name = name;
+
+            }
+            get name(){
+                return this._name;
+            }
+            set name(newName){
+                this._name = newName;
+            }
+        }
+        let s = new Student("tejas");
+        console.log()
+        s.name = "yeole";
+        console.log(s.name);
+    </script>
+</body>
+</html>

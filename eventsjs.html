@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="changeText()">click Me</button>
+
+    <p id="demo">Hello</p>
+    <script>
+        function changeText(){
+            document.getElementById("demo").innerHTML = "you clicked the button!";
+
+        }
+    </script> -->
+
+    <!-- onmouseover -->
+
+    <!-- <p onmouseover="showMessage()" style="width: 200px; padding: 10px; border: 1px solid black;">
+        Hover your mouse on this paragraph
+    </p>
+    <script>
+        function showMessage(){
+            document.write("hello");
+        }
+    </script> -->
+
+    <!-- onmouseout -->
+
+    <!-- <p onmouseout="mouseOut()">Move mouse out from here</p>
+    <script>
+        function mouseOut(){
+            alert("Mouse moved out!");
+
+        }
+    </script> -->
+
+    <!-- onchange -->
+    <!-- <input type="text" id="name" onchange="showName()"/>
+    <script>
+
+       function showName(){
+        let value = document.getElementById("name").value;
+        alert("you typed: "+value);
+        }
+    </script> -->
+
+    <!-- onkeyup -->
+    <!-- <input type="text" id="nameInput" onekeyup="showText()" placeholder="type Something..."/>
+    <p id="output"></p>
+    <script>
+        function showText(){
+            let text=document.getElementById("nameInput").value;
+            document.getElementById("output").innerText = "you typed:" + text;
+        }
+    </script> -->
+
+    <!-- onload -->
+
+    <!-- <h2> javascript onload event </h2>
+    <p>this message will show after the page is fully loaded</p>
+    <script>
+        function showWelcome(){
+            alert("page loaded successfully!");
+        }
+    </script> -->
+
+<!-- onkeydown -->
+ <!-- <h2>Javascript onkeydown Event</h2>
+ <input type="text" id="box" onkeydown="keypressed()" placeholder="press any key...."/>
+
+ <p id="msg"></p>
+    <script>
+        function keypressed(){
+            document.getElementById("msg").innerText = "A key is being pressed!";
+
+        }
+    </script>
+  -->
+
+  <!-- onsubmit -->
+
+  <!-- <h2>onsubmit event</h2>
+  <form onsubmit = "return submitForm()">
+    <input type="text" placeholder="enter name">
+    <button type="submit">submit</button>
+  </form>
+  <script>
+    function submitForm(){
+        alert("form submitted!");
+        return false;
+    }
+  </script> -->
+
+  <!-- <h3 ondblclick="doubleClick()">double click this text</h3>
+
+  <script>
+    function doubleClick(){
+        alert("you double-clicked!");
+    }
+  </script> -->
+
+  <!-- <h2>onfocus event</h2>
+  <input type="text" onfocus="focusBox()" placeholder="click and move">
+   <script>
+    function focusBox(){
+        alert("input box got focus!");
+
+    }
+   </script>
+
+   <h2>onblur event</h2>
+   <input type="text" onblur="blurBox()" placeholder="click and move away">
+   <script>
+    function blurBox(){
+        alert("input box lost focus!");
+    }
+   </script>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Promises</title>
+</head>
+<body>
+
+    <h1>JavaScript Promise object</h1>
+    <h2>The then() Method</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        function myDisplayer(some){
+            document.getElementsByClassName("demo").innerHTML = some;
+        }
+
+        let myPromise = new Promise(function(myResolve, myReject) {
+            let x = 0;
+
+            //  some code (try to change x to 5)
+
+            if (x==0){
+                myResolve("OK");
+
+            }
+        })
+    </script>
+
+     -->
+   
+
+    <!-- <script>
+        function myDisplayer(some){
+            document.getElementsByIdName("demo").innerHTML = some;
+        }
+
+        let mypromise = new Promise(function(myResolve, myReject) {
+            let x = 0;
+
+            //  some code (try to change x to 5)
+
+            if (x==0){
+                myResolve("OK");
+
+            } else {
+
+                myReject("Error");
+            }
+        });
+
+        myPromise.then(
+            function(value) {myDisplayer(value);},
+            function(error) {myDisplayer(error);}
+        );
+    </script> -->
+
+     <!-- <h1>JavaScript Functions</h1>
+    <h2>setTimeout() with a callback</h2>
+
+    <p>Wait 3 seconds (3000 miliseconds) for this page ti=o change.</p>
+
+    <h1 id="demo"></h1>
+
+    <script>
+        setTimeout(function(){myFunction("I Love You !!!");},3000);
+
+        function myFunction(value){
+            document.getElementById("demo").innerHTML = value;
+
+        }
+    </script> -->
+    <!-- <h2>open the console in the browser</h2>
+    <script>
+        let mypromise = new Promise(function(resolve, reject){
+            let isSucccessful = true;
+
+            if(isSuccessful){
+                resolve("Task complete successfully!");
+            }else{
+                reject("Task failed!");
+            }
+        });
+        myPromise
+          .then(function(result){
+            console.log(result);
+          })
+          .catch(function(error){
+            console.log(error);
+          });
+    </script>
+
+    <script>
+        function fetchData(){
+            return new Promise((resolve, reject) => {
+            setTimeout(() =>{
+                resolve("data received from server!");
+            },2000)
+            });
+        }
+        fetchData()
+            .then(data => console.log(data))
+            .catch(err => console.log(err));
+
+    </script> -->
+
+    <!-- <script>
+        function myDisplayer(some){
+            document.getElementById("demo").innerHTML = some;
+        }
+        async function myFunction() {return "hello";}
+
+        myFunction().then(
+            function(value) {mydisplayer(value);},
+            function(error) {myDisplayer(error);}
+        );
+    </script> -->
+    <script>
+    async function getFile(){
+        let mypromise = new Promise(function(resolve){
+            let req = new XMLHttpRequest();
+            req.open('GET', "index.html");
+            req.onload = function(){
+                if(req.status == 200){
+                    resolve(req.response);
+                }else{
+                    resolve("File not found");
+                }
+            };
+            req.send();
+        });
+        document.getElementById("demo").innerHTML = await mypromise;
+    }
+    getFile();
+</script>
+</body>
+</html>
+
+</body>
+</html>

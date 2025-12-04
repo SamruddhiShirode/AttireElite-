@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, 
+initial-scale=1.0">
+<title>Login Form</title>
+<!-- bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+}
+body {
+background: linear-gradient(135deg,#c48cb6,#c58dae7e,#f4b0e8,#f4b1eb,#c187a97e,#c48cb6);
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.login-box {
+background: #eceaea;
+padding: 30px 40px;
+border-radius: 10px;
+box-shadow: 0 0 50px rgba(0,0,0,0.3);
+width: 320px;
+text-align: center;
+}
+.login-box h2 {
+margin-bottom: 20px;
+color: #333;
+}
+.input-box {
+margin-bottom: 15px;
+text-align: left;
+}
+.input-box label {
+display: block;
+font-size: 14px;
+margin-bottom: 5px;
+color: #333;
+}
+.input-box input {
+width: 100%;
+padding: 8px 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 14px;
+}
+.btn {
+width: 100%;
+padding: 10px;
+border: none;
+background: #de06b6;
+color: #fff;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+transition: 0.3s;
+}
+.btn:hover {
+background: #f87cd2;
+box-shadow: Delay timing;
+}
+.message {
+margin-top: 15px;
+font-weight: bold;
+}
+.success {
+color: green;
+}
+.error {
+color: red;
+}
+</style>
+</head>
+<body>
+<div class="login-box">
+<h2>Log In</h2>
+<div class="input-box">
+<label>Username</label>
+<input type="text" id="username" placeholder="Enter 
+Username / E-mail">
+</div>
+<div class="input-box">
+<label>Password</label>
+<input type="password" id="password"
+placeholder="Enter Password">
+</div>
+<button class="btn"
+onclick="validateLogin()">Login</button>
+<p id="message" class="message"></p>
+</div>
+<script>
+function validateLogin() {
+let username = 
+document.getElementById("username").value;
+let password = 
+document.getElementById("password").value;
+let message = document.getElementById("message");
+if (username === "JazzyBree","shirodesam@gmail.com","Shakira" && password === "263","543","sam24") {
+    window.location.href = "index.html";//redirect to your website
+message.innerHTML = "✅ Login Successful!";
+message.className = "message success";
+window.location.href = "index.html";
+
+} else {
+message.innerHTML = "❌ Invalid Username or Password!";
+message.className = "message error";
+}
+}
+</script>
+</body>
+</html>

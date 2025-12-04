@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let student = {
+            name: "John",
+            age: 23,
+            display() {
+                console.log("Name: " + this.name );
+            }
+        };
+
+        student.display();
+
+    </script>
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class student{
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            show() {
+                console.log(this.name + " " + this. age);
+            }
+        }
+        let s1 = new student("John", 23);
+        s1.show();
+    </script>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Class and Object Example</h2>
+    <p id="output"></p>
+
+    
+    <script>
+        //create class
+
+        class car {
+            constructor(color,brand) {
+                this.color = color;
+                this.brand = brand;
+            }
+
+            //method
+            showDetails() {
+                return "Car Brand: " + this.brand + ", Color: " + this.color;
+            }
+        }
+    </script>
+
+    
+</body>
+</html>

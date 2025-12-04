@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Javascript form Validation</title>
+    <style>
+        body{
+            font-family:Arial;
+            padding: 20px;
+
+        }
+        form{
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        error{
+            color:red;
+            font-size: 14px;
+
+        }
+        input{
+            width:100%;
+            padding: 8px;
+            margin-top: 5px;
+
+        }
+        button{
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            background: green;
+            color: white;
+            border: none;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h2>JavaScript Form Validation</h2>
+    <form onsubmit="return validateForm()">
+        <!-- username -->
+    <label>Username:</label>
+    <input type="text" id="username">
+    <p id="userError" class="error"></p>
+
+    <!-- Email -->
+     <label>Email:</label>
+     <input type="text" id="email">
+     <p id="emailError" class="error"></p>
+
+     <!-- password -->
+      <label>password:</label>
+      <input type="password" id="password">
+      <p id="passError" class="error"></p>
+      <button type="submit">Submit</button>
+      
+    </form>
+    <script>
+    function validationForm(){
+        //get values
+        let username = document.getelementById("username").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let password = document.getElementById("password").value.trim();
+
+        //error elements
+        let userError = document.getElementById("UserError");
+        let emsilError = document.getElementById("emailError");
+        let passError = document.getElementById("passError");
+
+    
+         // reset error messages
+         userError.innerHTML = "";
+         emailError.innerHTML = "";
+         passError.innerHTML = "";
+ 
+         let isvalid = true;
+
+        //Username validation
+        if(username === ""){
+            userError.innerHTML = "Username id required.";
+            isValid = false;
+        }
+
+        //Email Validation
+        let emailpattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(email === ""){
+            emailError.innerHtML = "Email is Required.";
+            isValid = false;
+
+        }
+        else if(!email.match(emailpattern)){
+            emailError.innerHTML="Enter a valid email.";
+            isValid = false;
+
+        }
+        // password Validation
+        if(password ==="")
+        {
+            passError.innerHTML = "Password is required.";
+            isValid = false;
+
+        }else if (password.length < 6){
+            passError.innerHTML = "Password must be at least 6 characters.";
+            isValid = false;
+        }
+    return isValid;
+    }   
+    </script>
+</body>
+</html>
